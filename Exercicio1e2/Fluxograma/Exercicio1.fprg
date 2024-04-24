@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Danih"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-20 12:01:50 "/>
+        <attribute name="created" value="RGFuaWg7REVTS1RPUC1EQlNQRVFHOzIwMjQtMDQtMjA7IjExOjQ1OjQ5ICI7Mjc3OA=="/>
+        <attribute name="edited" value="RGFuaWg7REVTS1RPUC1EQlNQRVFHOzIwMjQtMDQtMjA7IjEyOjAxOjUwICI7MTsyODcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valor, troco, dinheiro, total" type="Real" array="False" size=""/>
+            <declare name="quantidade" type="Integer" array="False" size=""/>
+            <declare name="produto" type="String" array="False" size=""/>
+            <output expression="&quot;Informe o produto comprado&quot;" newline="True"/>
+            <input variable="produto"/>
+            <output expression="&quot;Informe o Pre&#231;o do Produto (R$)&quot;" newline="True"/>
+            <input variable="valor"/>
+            <output expression="&quot;Informe a Quantidade Comprada&quot;" newline="True"/>
+            <input variable="Quantidade"/>
+            <assign variable="total" expression="quantidade*valor"/>
+            <output expression="&quot;Total = R$&quot;" newline="False"/>
+            <output expression="total" newline="True"/>
+            <assign variable="dinheiro" expression="0"/>
+            <while expression="dinheiro&lt;total">
+                <output expression="&quot;Informe o Dinheiro para Pagamento (R$)&quot;" newline="True"/>
+                <input variable="dinheiro"/>
+                <if expression="dinheiro&gt;=total">
+                    <then>
+                        <assign variable="troco" expression="dinheiro-total"/>
+                        <output expression="&quot;troco = R$&quot;" newline="False"/>
+                        <output expression="troco" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Saldo Insuficiente para Compra&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

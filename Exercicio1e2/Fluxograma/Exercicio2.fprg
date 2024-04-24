@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Danih"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-20 12:13:06 "/>
+        <attribute name="created" value="RGFuaWg7REVTS1RPUC1EQlNQRVFHOzIwMjQtMDQtMjA7IjEyOjAxOjUzICI7Mjc2Ng=="/>
+        <attribute name="edited" value="RGFuaWg7REVTS1RPUC1EQlNQRVFHOzIwMjQtMDQtMjA7IjEyOjEzOjA2ICI7MTsyODc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="usuario, senha" type="Integer" array="False" size=""/>
+            <assign variable="usuario" expression="0"/>
+            <while expression="usuario!=1234">
+                <output expression="&quot;Usu&#225;rio: &quot;" newline="True"/>
+                <input variable="usuario"/>
+                <if expression="usuario==1234">
+                    <then/>
+                    <else>
+                        <output expression="&quot;Usu&#225;rio Inv&#225;lido&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+            <assign variable="senha" expression="0"/>
+            <while expression="senha!=9999">
+                <output expression="&quot;Senha: &quot;" newline="True"/>
+                <input variable="senha"/>
+                <if expression="senha==9999">
+                    <then/>
+                    <else>
+                        <output expression="&quot;Senha Inv&#225;lida&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Acesso Permitido&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
